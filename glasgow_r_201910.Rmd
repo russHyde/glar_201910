@@ -1,0 +1,24 @@
+---
+title: "R Community"
+subtitle: "Presented to Glasgow R Users Group"
+author: "Russ Hyde"
+date: "10 October 2019"
+output:
+  xaringan::moon_reader:
+    nature:
+      autoplay: 10000
+      countdown: 10000
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Why use R when you could use {...}?
+
+The community wins
+
+---
+
+## Slide 2 
+
