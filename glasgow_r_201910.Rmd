@@ -17,38 +17,55 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## We all get stuck
 
-[twitter #rstats](https://www.twitter.com)
+Ask actual people:
 
-- or ask actual people
+```{r, echo = FALSE}
+data <- data.frame(
+  from = "Ask people",
+  to = c("twitter.com", "rfordatasci.com", "stack-overflow", "biostars",
+"github")
+)
+```
 
-[github](https://www.github.com)
+```{r, echo = FALSE}
+p <- networkD3::simpleNetwork(data, height = "600px", width = "600px",
+  linkDistance = 100, opacity = 0.9, fontSize = 24, nodeColour = "#499382")
+```
 
-[biostars.org](https://www.biostars.org)
+```{r}
+p
+```
 
-- bioinformatics
+<!--
+- [twitter #rstats](https://twitter.com/search?q=%23rstats&src=typed_query&f=live)
 
-[R for Data Science](https://www.rfordatasci.com/)
+- [rfordatasci.com](https://www.rfordatasci.com/) // join the slack !
 
-- join the Slack channel!!!
+- stack overflow / biostars
+
+- [github.com](https://www.github.com)
+
+-->
 
 ## We all want to improve
 
-[codereview.stackexchange](https://codereview.stackexchange.com)
+Learn new stuff:
 
-- once your code works
+- [#TidyTuesday](https://github.com/rfordatascience/tidytuesday)
 
-<!--
-- exercism.io
-- codewars.com
--->
+- [exercism.io](https://www.exercism.io) / [codewars.com](https://codewars.com)
 
-<!--Did not rank:
+Once your code works, get it improved:
 
-- R-help / R-devel / bioconductor mailing lists, stack overflow
+- [codereview.stackexchange](https://codereview.stackexchange.com)
 
-- Reading the manpage / book
+## We can all help each other
 
--->
+- [hacktoberfest]()
+
+- [codetriage]()
+
+-
 
 ## Me & R
 
@@ -95,7 +112,8 @@ gr2 <- create_ring(5) %>%
 
 ```{r, echo = TRUE, fig.height=4}
 # `ggraph` uses `ggplot2`-like syntax for plotting graphs
-gr1 %>% bind_graphs(gr2) %>%
+gr1 %>%
+  bind_graphs(gr2) %>%
   ggraph(layout = "kk") +
   geom_edge_link() +
   geom_node_point(size = 8, colour = "steelblue") +
