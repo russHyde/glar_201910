@@ -1,13 +1,10 @@
 ---
-title: "R Community"
+title: "Contributing to the R Ecosystem"
 subtitle: "Presented to Glasgow R Users Group"
 author: "Russ Hyde (tweet : @haematobot; GH : @russHyde)"
 date: "10 October 2019"
 output:
-  xaringan::moon_reader:
-    nature:
-      #autoplay: 30000
-      countdown: 30000
+  ioslides_presentation
 ---
 
 ```{r setup, include=FALSE}
@@ -16,9 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Why use R instead of {...}?
 
-![why_use_r_google_complete](figures/why_use_r.PNG)
-
----
+![](figures/why_use_r.PNG)
 
 ## We all get stuck
 
@@ -28,10 +23,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 [github](https://www.github.com)
 
-[codereview.stackexchange](https://codereview.stackexchange.com)
-
-- once your code works
-
 [biostars.org](https://www.biostars.org)
 
 - bioinformatics
@@ -40,13 +31,24 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - join the Slack channel!!!
 
-Did not rank:
+## We all want to improve
+
+[codereview.stackexchange](https://codereview.stackexchange.com)
+
+- once your code works
+
+<!--
+- exercism.io
+- codewars.com
+-->
+
+<!--Did not rank:
 
 - R-help / R-devel / bioconductor mailing lists, stack overflow
 
 - Reading the manpage / book
 
----
+-->
 
 ## Me & R
 
@@ -64,8 +66,6 @@ Recent contributions to bigger projects
 
 - [lintr](https://github.com/jimhester/lintr)
 
----
-
 ## Let's do something for the community ...
 
 [`tidygraph`](https://github.com/thomasp85/tidygraph)
@@ -73,6 +73,8 @@ Recent contributions to bigger projects
 [`ggraph`](https://github.com/thomasp85/ggraph)
 
 Example: network analysis with `tidygraph` and plotting with `ggraph`
+
+---
 
 ```{r, echo = TRUE, message = FALSE}
 library(tidygraph)
@@ -104,8 +106,6 @@ gr1 %>% bind_graphs(gr2) %>%
 Code from
 [data-imaginist.com](data-imaginist.com/2017/introducing-tidygraph/)
 
----
-
 ## How awesome was that?
 
 `awesome-R`
@@ -115,8 +115,6 @@ Code from
 - [github](https://github.com/qunwf/awesome-R)
 
 Network analysis section of the [awesome-R website](https://awesome-r.com/#awesome-r-network-analysis)
-
----
 
 ## Adding to the awesome list using `git`
 
@@ -137,9 +135,4 @@ PUSH
 PULL REQUEST
 - Tell the author of this repo that they can include my changes
 
----
-
 ## Did the live section work?
-
----
-
