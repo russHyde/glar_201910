@@ -23,8 +23,8 @@ Ask actual people:
 getting_stuck_data <- data.frame(
   from = "Ask people",
   to = c(
-    "twitter.com", "rfordatasci.com", "stack-overflow", "biostars",
-    "github"
+    "twitter.com", "rfordatasci.com", "stack-overflow",
+    "biostars / bioconductor", "github"
   )
 )
 ```
@@ -55,11 +55,11 @@ Once your code works, get it improved:
 
 ## We can all help each other
 
-- [hacktoberfest]()
+<!--
 
-- [codetriage]()
+- TODO (use the same tabs as previous slide: but refer to mentor tracks)
 
-- TODO
+-->
 
 ## Let's do something for the community ...
 
@@ -102,7 +102,7 @@ PULL REQUEST
 
 <span style="color:purple">...</span>
 
-<span style="color:purple">_Just helping people filter and curate and figure-out what is in a ticket and if it's really important... I can't tell you how useful this is_</span>
+<span style="color:purple">_Just helping people filter, and curate, and figure-out what is in a ticket and if it's really important... I can't tell you how useful this is_</span>
 
 Heather C Miller: Interviewed on [CoRecursive](https://corecursive.com/038-heather-miller-open-source/)
 podcast (2019-09-15)
@@ -149,7 +149,7 @@ lint(filename = f)
 
 (Note : I was really fixing a problem with my package [dupree](https://github.com/russHyde/dupree/))
 
-## Submitting Pull Requests isn't everything
+## How to find collaborators?
 
 ![](figures/collaborate_on_lintr1.png)
 
@@ -157,7 +157,7 @@ lint(filename = f)
 
 ## A Common Theme:
 
-- One(few) main developers
+- One (few) main developer
 
 - Lots of open issues
 
@@ -175,11 +175,19 @@ lint(filename = f)
 
 [But uncommon: Few packages, but many package developers, depend on `lintr`)]
 
-## CodeTriage.com
+## How to find a project to help?
 
-[https://www.codetriage.com/]()
+[https://www.codetriage.com/](https://www.codetriage.com/?language=R)
 
-TODO
+[https://hacktoberfest.digitalocean.com/]()
+
+GitHub labels
+
+- "help wanted", "good first issue", "tidy-dev-day"
+- "reprex"
+- ["hacktoberfest"](https://github.com/search?q=label%3Ahacktoberfest+state%3Aopen+is%3Aissue+language%3AR&type=Issues)
+
+Ask
 
 ## Cheers
 
