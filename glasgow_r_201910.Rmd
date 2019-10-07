@@ -9,6 +9,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(tibble)
 ```
 
 ## Why use R instead of {...}?
@@ -17,23 +18,26 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## We all get stuck
 
-Ask actual people:
+```{r}
+simpleNet <- purrr::partial(networkD3::simpleNetwork,
+                            height = "600px", width = "600px", linkDistance = 100,
+                            opacity = 0.9, fontSize = 24,
+                            fontFamily = "sans-serif", charge = -50)
+```
 
 ```{r, echo = FALSE}
 getting_stuck_data <- data.frame(
-  from = "Ask people",
+  from = "help(help)",
   to = c(
-    "twitter.com", "rfordatasci.com", "stack-overflow",
+    "twitter.com/#rstats", "rfordatasci.com", "stack-overflow",
     "biostars / bioconductor", "github"
   )
 )
 ```
 
 ```{r, echo = FALSE}
-getting_stuck_plot <- networkD3::simpleNetwork(
-  getting_stuck_data,
-  height = "600px", width = "600px",
-  linkDistance = 100, opacity = 0.9, fontSize = 24, nodeColour = "#499382"
+getting_stuck_plot <- simpleNet(
+  getting_stuck_data, nodeColour = "#499382"
 )
 ```
 
@@ -41,25 +45,33 @@ getting_stuck_plot <- networkD3::simpleNetwork(
 getting_stuck_plot
 ```
 
-## We all want to improve
+## We all want to improve & we can all help each other
 
-Learn new stuff:
+```{r, echo = FALSE}
+learning_stuff_data <- tribble(
+  ~from, ~to,
+  "Learning", "Project-Oriented",
+  "Learning", "Code-Challenges",
+  "Learning", "Code-Reviews",
+  "Project-Oriented", "#TidyTuesday",
+  "Project-Oriented", "Kaggle.com",
+  "Code-Challenges", "Exercism.io",
+  "Code-Challenges", "CodeWars.com",
+  "Code-Reviews", "codereview.stackexchange"
+)
+```
 
-- [#TidyTuesday](https://github.com/rfordatascience/tidytuesday)
+```{r, echo = FALSE}
+learning_stuff_plot <- simpleNet(learning_stuff_data, nodeColour = "#935849")
+```
 
-- [exercism.io](https://www.exercism.io) / [codewars.com](https://codewars.com)
+```{r}
+learning_stuff_plot
+```
 
-Once your code works, get it improved:
+## Hurdles to Open Source Contribution {.centered}
 
-- [codereview.stackexchange](https://codereview.stackexchange.com)
-
-## We can all help each other
-
-<!--
-
-- TODO (use the same tabs as previous slide: but refer to mentor tracks)
-
--->
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Activation_energy.svg/240px-Activation_energy.svg.png){width=500px}
 
 ## Let's do something for the community ...
 
@@ -73,21 +85,21 @@ README: [.../blob/master/README.md](https://github.com/jumpingrivers/meetingsR/b
 
 ## `git` terminology
 
-FORK
+<span style="color:purple">FORK</span>
 - Make me a copy of this repo(sitory) on github
 
-PULL
+<span style="color:purple">PULL</span>
 - Download this repo to my computer
 
 (Make the changes you need)
 
-ADD/COMMIT
+<span style="color:purple">ADD / COMMIT</span>
 - Add these changes to my local copy of this repo
 
-PUSH
+<span style="color:purple">PUSH</span>
 - Upload my updated version of this repo to github
 
-PULL REQUEST
+<span style="color:purple">PULL REQUEST</span>
 - Tell the author of this repo that they can include my changes
 
 ## Live section:
@@ -189,7 +201,17 @@ GitHub labels
 
 Ask
 
+## `explainerr` - a sandbox project for learning git and regexes
+
+TODO: rename `bugger` as `explainerr`
+
+TODO: show how it works for some simple R errors
+
+TODO:
+
 ## Cheers
+
+Slides: [http://rpubs.com/russH/535683]()
 
 More about Open-Source Contribution
 
