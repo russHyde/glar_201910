@@ -69,6 +69,10 @@ learning_stuff_plot <- simpleNet(learning_stuff_data, nodeColour = "#935849")
 learning_stuff_plot
 ```
 
+## Hurdles to Open Source Contribution {.centered}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Activation_energy.svg/240px-Activation_energy.svg.png){width=500px}
+
 ## Let's do something for the community ...
 
 Jumping Rivers `meetingsR` list:
