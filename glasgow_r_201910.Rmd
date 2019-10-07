@@ -193,7 +193,9 @@ More about Open-Source Contribution
 
 Can OS projects be healthily maintained?
 
-[Open Source Health and Diversity](https://corecursive.com/038-heather-miller-open-source/)
+[Open Source Health and Diversity (CoRecursive)](https://corecursive.com/038-heather-miller-open-source/)
+
+[Contributing to Open Source (Talk Python To Me)](https://talkpython.fm/episodes/show/132/contributing-to-open-source)
 
 [Guide to Open Source Maintenance](https://github.com/commercialhaskell/commercialhaskell/blob/master/guide/open-source-maintenance.md)
 
