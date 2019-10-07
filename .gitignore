@@ -5,3 +5,5 @@
 
 *.html
 glasgow_r_201910_files/
+
+temp/*.R
