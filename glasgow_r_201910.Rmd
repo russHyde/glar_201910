@@ -29,7 +29,7 @@ simpleNet <- purrr::partial(networkD3::simpleNetwork,
 getting_stuck_data <- data.frame(
   from = "help(help)",
   to = c(
-    "twitter.com/#rstats", "rfordatasci.com", "stack-overflow",
+    "twitter.com/#rstats", "r4ds.online", "stack-overflow",
     "biostars / bioconductor", "github"
   )
 )
