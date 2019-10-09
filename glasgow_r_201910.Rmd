@@ -23,6 +23,47 @@ pre code, pre, code {
 }
 ```
 
+##
+
+```{r}
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(ggplot2)
+  library(xkcd)
+})
+```
+
+```{r}
+set.seed(42)
+
+mapping <- aes(x, y, scale, ratioxy, angleofspine,
+ anglerighthumerus, anglelefthumerus,
+ anglerightradius, angleleftradius,
+ anglerightleg, angleleftleg, angleofneck)
+
+coders <- data.frame(
+  x = c(15, 20),
+  y = c(4, 3),
+  scale = 0.5,
+  ratioxy = 25 / 4, # xkcd paper uses diff(xrange) / diff(yrange)
+  angleofspine = -pi / 2,
+  anglerighthumerus = c(pi / 4, -pi / 6),
+  anglelefthumerus = c(pi / 2 + pi / 4, pi + pi / 6),
+  anglerightradius = c(pi / 3, -pi / 3),
+  angleleftradius = c(pi / 3, -pi / 3),
+  anglerightleg = 3 * pi / 2 - pi / 12,
+  angleleftleg = 3 * pi / 2 + pi / 12,
+  angleofneck = runif(2, 3 * pi / 2 - pi / 10, 3 * pi / 2 + pi / 10)
+)
+
+ggplot(data = mtcars) +
+  geom_point(aes(x = mpg, y = wt)) +
+  theme(text = element_text(size = 16, family = "xkcd")) +
+  theme_xkcd() +
+  xkcdaxis(range(mtcars$mpg), range(mtcars$wt)) +
+  xkcdman(mapping, coders)
+```
+
 ## Why use R instead of {...}?
 
 ![](figures/why_use_r.PNG)
