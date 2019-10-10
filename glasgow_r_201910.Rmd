@@ -71,10 +71,11 @@ ggplot(data = mtcars) +
 ## We all get stuck
 
 ```{r}
-simpleNet <- purrr::partial(networkD3::simpleNetwork,
-                            height = "600px", width = "600px", linkDistance = 100,
-                            opacity = 0.9, fontSize = 24,
-                            fontFamily = "sans-serif", charge = -50)
+simple_net <- purrr::partial(
+  networkD3::simpleNetwork,
+  height = "600px", width = "600px", linkDistance = 100, opacity = 0.9,
+  fontSize = 24, fontFamily = "sans-serif", charge = -50
+)
 ```
 
 ```{r, echo = FALSE}
@@ -88,7 +89,7 @@ getting_stuck_data <- data.frame(
 ```
 
 ```{r, echo = FALSE}
-getting_stuck_plot <- simpleNet(
+getting_stuck_plot <- simple_net(
   getting_stuck_data, nodeColour = "#499382"
 )
 ```
@@ -114,7 +115,7 @@ learning_stuff_data <- tribble(
 ```
 
 ```{r, echo = FALSE}
-learning_stuff_plot <- simpleNet(learning_stuff_data, nodeColour = "#935849")
+learning_stuff_plot <- simple_net(learning_stuff_data, nodeColour = "#935849")
 ```
 
 ```{r}
