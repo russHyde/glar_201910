@@ -12,6 +12,17 @@ knitr::opts_chunk$set(echo = FALSE)
 library(tibble)
 ```
 
+```{css}
+pre code, pre, code {
+  max-height: 480px;
+  white-space: pre !important;
+  overflow-x: scroll !important;
+  overflow-y: scroll !important;
+  word-break: keep-all !important;
+  word-wrap: initial !important;
+}
+```
+
 ## Why use R instead of {...}?
 
 ![](figures/why_use_r.PNG)
@@ -201,7 +212,7 @@ GitHub labels
 
 Ask
 
-## `explainerr` - a sandbox project for learning git and regexes
+## `explainerr` - a sandbox project for learning git and regexes {.smaller}
 
 ```{r, message = FALSE}
 if (! "explainerr" %in% installed.packages()) {
@@ -253,7 +264,7 @@ Recent contributions to bigger projects
 
 - [lintr](https://github.com/jimhester/lintr)
 
-## Non-default linters
+## Non-default linters {.smaller}
 
 ```{r, echo = TRUE}
 lint(
