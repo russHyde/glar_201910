@@ -12,6 +12,17 @@ knitr::opts_chunk$set(echo = FALSE)
 library(tibble)
 ```
 
+```{css}
+pre code, pre, code {
+  max-height: 480px;
+  white-space: pre !important;
+  overflow-x: scroll !important;
+  overflow-y: scroll !important;
+  word-break: keep-all !important;
+  word-wrap: initial !important;
+}
+```
+
 ## Why use R instead of {...}?
 
 ![](figures/why_use_r.PNG)
@@ -191,7 +202,7 @@ lint(filename = f)
 
 [https://www.codetriage.com/](https://www.codetriage.com/?language=R)
 
-[https://hacktoberfest.digitalocean.com/]()
+[https://hacktoberfest.digitalocean.com/](https://hacktoberfest.digitalocean.com/)
 
 GitHub labels
 
@@ -201,13 +212,19 @@ GitHub labels
 
 Ask
 
-## `explainerr` - a sandbox project for learning git and regexes
+## `explainerr` - a sandbox project for learning git and regexes {.smaller}
 
-TODO: rename `bugger` as `explainerr`
+```{r, message = FALSE}
+if (! "explainerr" %in% installed.packages()) {
+  devtools::install_github("russHyde/explainerr")
+}
+```
 
-TODO: show how it works for some simple R errors
+[https://github.com/russHyde/explainerr/](https://github.com/russHyde/explainerr/)
 
-TODO:
+```{r, echo = TRUE}
+explainerr::explain("object of type 'closure' is not subsettable")
+```
 
 ## Cheers
 
@@ -247,7 +264,7 @@ Recent contributions to bigger projects
 
 - [lintr](https://github.com/jimhester/lintr)
 
-## Non-default linters
+## Non-default linters {.smaller}
 
 ```{r, echo = TRUE}
 lint(
